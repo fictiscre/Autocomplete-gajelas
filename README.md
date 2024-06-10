@@ -1,3 +1,3 @@
 conio.h / ncurses <<<<<<<<<<<<<<<< NO TUI
 
-Ilham kopros
+yusuf kopling

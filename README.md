@@ -1,1 +1,1 @@
-conio.h <<<<<<<<<<<<<<< ncurses
+conio.h / ncurses <<<<<<<<<<<<<<<< NO TUI

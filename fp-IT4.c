@@ -20,29 +20,29 @@ TrieNode* createNode() {
 }
 
 void insert(TrieNode* root, const char* key) {
-    TrieNode* crawl = root;
+    TrieNode* currentNode = root;
     while (*key) {
         int index = *key - 'a';
-        if (!crawl->children[index]) {
-            crawl->children[index] = createNode();
+        if (!currentNode->children[index]) {
+            currentNode->children[index] = createNode();
         }
-        crawl = crawl->children[index];
+        currentNode = currentNode->children[index];
         key++;
     }
-    crawl->isEndOfWord = 1;
+    currentNode->isEndOfWord = 1;
 }
 
 TrieNode* searchNode(TrieNode* root, const char* key) {
-    TrieNode* crawl = root;
+    TrieNode* currentNode = root;
     while (*key) {
         int index = *key - 'a';
-        if (!crawl->children[index]) {
+        if (!currentNode->children[index]) {
             return NULL;
         }
-        crawl = crawl->children[index];
+        currentNode = currentNode->children[index];
         key++;
     }
-    return crawl;
+    return currentNode;
 }
 
 void suggestWordsUtil(TrieNode* root, const char* prefix) {
